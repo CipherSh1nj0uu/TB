@@ -55,6 +55,3 @@ def main():
 
     for i in range(num_passwords):
         print("password " + str(i + 1) + " = " + password[i])
-
-
-main()
