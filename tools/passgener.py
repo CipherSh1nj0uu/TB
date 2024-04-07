@@ -18,7 +18,7 @@ def generate_password(pwlength):
             password = password + alphabet[next_letter_index]
 
         password = replace_with_number(password)
-        password = replace_with_uppercase_letter(password)
+#        password = replace_with_uppercase_letter(password)
 
         passwords.append(password)
 
@@ -32,15 +32,17 @@ def replace_with_number(pword):
         return pword
 
 
-def replace_with_uppercase_letter(pword):
-    for i in range(random.randrange(1, 3)):
-        replace_index = random.randrange(len(pword) // 2, len(pword))
-        pword = pword[0:replace_index] + pword[replace_index].upper() + pword[replace_index + 1:]
-        return pword
+#def replace_with_uppercase_letter(pword):
+#    for i in range(random.randrange(1, 3)):
+#        replace_index = random.randrange(len(pword) // 2, len(pword))
+#        pword = pword[0:replace_index] + pword[replace_index].upper() + pword[replace_index + 1:]
+#        return pword
 
 
 def main():
-    num_passwords = int(input("posa passwords thes na kanw generate?? "))
+    print("Mokzz: How many password do you want me to make?")
+    num_passwords = int(input("Me: "))
+    
 
     passwords_lengths = []
 
