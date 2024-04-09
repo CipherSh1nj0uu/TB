@@ -31,13 +31,13 @@ def replace_with_number(pword):
         pword = pword[0:replace_index] + str(random.randrange(10)) + pword[replace_index + 1:]
         return pword
 
-
-#def replace_with_uppercase_letter(pword):
-#    for i in range(random.randrange(1, 3)):
-#        replace_index = random.randrange(len(pword) // 2, len(pword))
-#        pword = pword[0:replace_index] + pword[replace_index].upper() + pword[replace_index + 1:]
-#        return pword
-
+"""
+def replace_with_uppercase_letter(pword):
+    for i in range(random.randrange(1, 3)):
+        replace_index = random.randrange(len(pword) // 2, len(pword))
+        pword = pword[0:replace_index] + pword[replace_index].upper() + pword[replace_index + 1:]
+        return pword
+"""
 
 def main():
     print("Mokzz: How many password do you want me to make?")
@@ -47,7 +47,7 @@ def main():
     passwords_lengths = []
 
     for i in range(num_passwords):
-        length = int(input("Bale to length tou password #" + str(i + 1) + " "))
+        length = int(input("Set the length of password #" + str(i + 1) + " "))
         if length < 3:
             length = 3
 
