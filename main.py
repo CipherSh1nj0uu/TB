@@ -1,5 +1,5 @@
-from Tools import passgener
-from Tools import autofilter
+from tools import passgener
+from tools import autofilter
 def main():
     print("\nMokzz: Welcome to my very first...primitive toolbox! You can use this set of tools however you want!\nMokzz: Choose the tool you want to use.\nPassword Generator(1) - AutoFilter(2)")
     tool=int(input("Me: "))
