@@ -34,7 +34,7 @@ def replace_with_number(pword):
         pword = pword[0:replace_index] + str(random.randrange(10)) + pword[replace_index + 1:]
         return pword
 
-#This function mixes the given password with uppercase letters.
+#This function mixes the given password with Uppercase letters.
 def replace_with_uppercase_letter(pword):
     for i in range(random.randrange(1, 3)):
         replace_index = random.randrange(len(pword) // 2, len(pword))
