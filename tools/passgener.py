@@ -1,15 +1,18 @@
-#
-# Author: CipherSh1nj0u
-#
+#Author: CipherSh1nj0u
+#*Important Message*: Be aware of the comments I leave. Usually they start with hashtag (#example) for single line comments or apostrophe ('''example''') for multiple lines of comments.
 
+#imports the build-in library 'random'.
 import random
 
-
+#generates passwords with the help of other functions
 def generate_password(pwlength):
+    
+    #Modern Latin Alphabet
     alphabet = "abcdefghijklmnopqrstuvwxyz"
 
     passwords = []
 
+    #this {for} loop mixes the string letters from the alphabet.
     for x in pwlength:
 
         password = ""
@@ -17,13 +20,13 @@ def generate_password(pwlength):
             next_letter_index = random.randrange(len(alphabet))
             password = password + alphabet[next_letter_index]
 
+        #this line of code calls function "replace_with_number".
         password = replace_with_number(password)
 #        password = replace_with_uppercase_letter(password)
 
         passwords.append(password)
 
     return passwords
-
 
 def replace_with_number(pword):
     for i in range(random.randrange(1, 3)):
@@ -39,21 +42,29 @@ def replace_with_uppercase_letter(pword):
         return pword
 """
 
+#Main fuction of the generator that calls other fuctions.
 def main():
-    print("Mokzz: How many password do you want me to make?")
-    num_passwords = int(input("Me: "))
+    print("How many passwords do you to generate?")
+    num_passwords = int(input("Enter a Number [Min=3 ~ Max=16]: "))
     
 
     passwords_lengths = []
 
-    for i in range(num_passwords):
+    #this {for} loop sets the length of the passwords according to your answer.
+    for i in range(num_passwords): 
         length = int(input("Set the length of password #" + str(i + 1) + " "))
         if length < 3:
             length = 3
+        elif length > 16:
+            length = 16
+        else:
+            continue()
 
         passwords_lengths.append(length)
 
+    #calls 'generate_password' fuction (line 7).
     password = generate_password(passwords_lengths)
 
+    #this {for} loop prints the randomized passwords you want.
     for i in range(num_passwords):
         print("password " + str(i + 1) + " = " + password[i])
