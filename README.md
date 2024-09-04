@@ -3,7 +3,7 @@ Only a handful of tools written in python, hope i maintain it, currently it only
 
 <details>
 	<summary>Requirements</summary>
-	<div><h2> Python</h2></div>
-	<div>* I recommend the latest and greatest version of Python 3, im currently using 3.12.4</div>
+	<div><h2> Python 3.0 or later</h2></div>
+		  <div>* I recommend the latest and greatest version of Python 3, im currently using 3.12.4</div>
 		
 </details>
