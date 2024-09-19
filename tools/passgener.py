@@ -1,4 +1,4 @@
-#Author: CipherSh1nj0u
+#Author: GitZamp
 #*Important Message*: Be aware of the comments I leave. Usually they start with hashtag (#example) for single line comments or apostrophe ('''example''') for multiple lines of comments.
 
 #Imports the build-in library 'random'.

@@ -1,4 +1,4 @@
-#   @Author: Shinzzo
+#   @Author: GitZamp
 from collections import defaultdict
 from os import rename,path,listdir,mkdir
 
@@ -14,8 +14,8 @@ executables = ('dmg', 'exe', 'iso')
 #   Main function that creates directories & maps files from downloads folder based on their file extensions.
 def main():
     cwd = path.expanduser('~')
-    # note, if you use linux you probably want to change the string "Movies" to "Vide in the lines: 18, 41
-    destindirs = ('Music', 'Movies', 'Pictures', 'Documents', 'Applications', 'Other')
+    # note, if you use windows you probably want to change the string "Videos" to "Movies" in the lines: 18, 41
+    destindirs = ('Music', 'Videos', 'Pictures', 'Documents', 'Applications', 'Other')
     for d in destindirs:
         dir_path = path.join(cwd, d)
         if not path.isdir(dir_path):
@@ -38,7 +38,7 @@ def main():
                 rename(path.join(downloads_path, file), path.join(cwd, 'Music', file))
         elif f_ext in video:
             for file in f_list:
-                rename(path.join(downloads_path, file), path.join(cwd, 'Movies', file))
+                rename(path.join(downloads_path, file), path.join(cwd, 'Videos', file))
         elif f_ext in images:
             for file in f_list:
                 rename(path.join(downloads_path, file), path.join(cwd, 'Pictures', file))

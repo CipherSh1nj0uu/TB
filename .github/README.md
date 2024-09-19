@@ -1,5 +1,5 @@
 # TB - ToolBox
-Only a handful of tools written in Python, hope i maintain it :P, currently it only contains an autofilter and a password generator that i made a while ago and it needs some optimization...you do ***NOT*** need any external library/module installed!
+Only a handful of tools written in Python, hope I maintain it :P, currently it only contains an autofilter and a password generator that i made a while ago and it needs some optimization...you do ***NOT*** need any external library/module installed!
 
 <details>
 	<summary>Requirements</summary>
