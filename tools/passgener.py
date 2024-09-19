@@ -1,4 +1,4 @@
-#Author: CipherSh1nj0u
+#Author: GitZamp
 #*Important Message*: Be aware of the comments I leave. Usually they start with hashtag (#example) for single line comments or apostrophe ('''example''') for multiple lines of comments.
 
 #Imports the build-in library 'random'.
@@ -34,7 +34,7 @@ def replace_with_number(pword):
         pword = pword[0:replace_index] + str(random.randrange(10)) + pword[replace_index + 1:]
         return pword
 
-#This function mixes the given password with uppercase letters.
+#This function mixes the given password with Uppercase letters.
 def replace_with_uppercase_letter(pword):
     for i in range(random.randrange(1, 3)):
         replace_index = random.randrange(len(pword) // 2, len(pword))
