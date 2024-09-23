@@ -1,6 +1,6 @@
 #   @Author: GitZamp
 from collections import defaultdict
-from os import rename,path,listdir,mkdir,name
+from os import rename, path, listdir, mkdir, name
 
 #   Common file extensions.
 audio = ('mp3', 'wav', 'midi')
@@ -17,7 +17,8 @@ def main():
     cwd = path.expanduser('~')
     if name == "nt":
         videofolder = "Movies"
-    destindirs = ('Music', videofolder, 'Pictures', 'Documents', 'Applications', 'Other')
+    destindirs = ('Music', videofolder, 'Pictures',
+                  'Documents', 'Applications', 'Other')
     for d in destindirs:
         dir_path = path.join(cwd, d)
         if not path.isdir(dir_path):
@@ -34,19 +35,25 @@ def main():
     for f_ext, f_list in files_mapping.items():
         if f_ext in executables:
             for file in f_list:
-                rename(path.join(downloads_path, file), path.join(cwd, 'Applications', file))
+                rename(path.join(downloads_path, file),
+                       path.join(cwd, 'Applications', file))
         elif f_ext in audio:
             for file in f_list:
-                rename(path.join(downloads_path, file), path.join(cwd, 'Music', file))
+                rename(path.join(downloads_path, file),
+                       path.join(cwd, 'Music', file))
         elif f_ext in video:
             for file in f_list:
-                rename(path.join(downloads_path, file), path.join(cwd, videofolder, file))
+                rename(path.join(downloads_path, file),
+                       path.join(cwd, videofolder, file))
         elif f_ext in images:
             for file in f_list:
-                rename(path.join(downloads_path, file), path.join(cwd, 'Pictures', file))
+                rename(path.join(downloads_path, file),
+                       path.join(cwd, 'Pictures', file))
         elif f_ext in documents or f_ext in compressed:
             for file in f_list:
-                rename(path.join(downloads_path, file), path.join(cwd, 'Documents', file))
+                rename(path.join(downloads_path, file),
+                       path.join(cwd, 'Documents', file))
         else:
             for file in f_list:
-                rename(path.join(downloads_path, file), path.join(cwd, 'Other', file))
+                rename(path.join(downloads_path, file),
+                       path.join(cwd, 'Other', file))
