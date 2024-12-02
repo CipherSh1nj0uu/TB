@@ -4,11 +4,11 @@ from os import rename, path, listdir, mkdir, name
 
 #   Common file extensions.
 audio = ('mp3', 'wav', 'midi')
-video = ('mp4', 'mpg', 'mpeg', 'avi', 'mov', 'flv', 'mkv', 'm4v', 'h264')
+video = ('mp4', 'mpg', 'mpeg', 'avi', 'mov', 'flv', 'mkv')
 images = ('png', 'jpg', 'jpeg', 'gif', 'svg', 'bmp', 'svg',)
 documents = ('txt', 'pdf', 'doc', 'docx', 'html', 'ppt', 'pptx', 'log')
 compressed = ('zip', '7z', 'rar', 'tar', 'gz', 'rpm', 'pkg', 'deb')
-executables = ('dmg', 'exe', 'iso')
+executables = ('dmg', 'exe', 'iso', 'appimage')
 
 
 #   Main function that creates directories & maps files from downloads folder based on their file extensions.
