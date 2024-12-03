@@ -15,8 +15,6 @@ executables = ('dmg', 'exe', 'iso', 'appimage')
 def main():
     videofolder = "Videos"
     cwd = path.expanduser('~')
-    if name == "nt":
-        videofolder = "Movies"
     destindirs = ('Music', videofolder, 'Pictures',
                   'Documents', 'Applications', 'Other')
     for d in destindirs:
@@ -44,7 +42,7 @@ def main():
         elif f_ext in video:
             for file in f_list:
                 rename(path.join(downloads_path, file),
-                       path.join(cwd, videofolder, file))
+                       path.join(cwd, 'Videos', file))
         elif f_ext in images:
             for file in f_list:
                 rename(path.join(downloads_path, file),

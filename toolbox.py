@@ -1,4 +1,5 @@
-import tools
+from tools import passgener
+from tools import autofilter
 
 
 def main():

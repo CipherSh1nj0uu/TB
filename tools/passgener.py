@@ -4,55 +4,47 @@
 # Imports the build-in library 'random'.
 import random
 
-# Generates passwords with the help of other functions.
+def main():
+    def generate_password(pwlength):
+        # Modern Latin Alphabet.
+        alphabet = "abcdefghijklmnopqrstuvwxyz"
 
+        passwords = []
+        # This {for} loop mixes the password with letters from the alphabet.
+        for x in pwlength:
 
-def generate_password(pwlength):
+            password = ""
+            for y in range(x):
+                next_letter_index = random.randrange(len(alphabet))
+                password = password + alphabet[next_letter_index]
 
-    # Modern Latin Alphabet.
-    alphabet = "abcdefghijklmnopqrstuvwxyz"
+            # The 2 lines below call the fuctions "replace_with_number" and "replace_with_uppercase_letter", (line 31 and line 37 respectively).
+            password = replace_with_number(password)
+            password = replace_with_uppercase_letter(password)
 
-    passwords = []
-    # This {for} loop mixes the password with letters from the alphabet.
-    for x in pwlength:
+            passwords.append(password)
 
-        password = ""
-        for y in range(x):
-            next_letter_index = random.randrange(len(alphabet))
-            password = password + alphabet[next_letter_index]
-
-        # The 2 lines below call the fuctions "replace_with_number" and "replace_with_uppercase_letter", (line 31 and line 37 respectively).
-        password = replace_with_number(password)
-        password = replace_with_uppercase_letter(password)
-
-        passwords.append(password)
-
-    return passwords
+        return passwords
 
 # This functions mixes the given password with random numbers.
 
 
-def replace_with_number(pword):
-    for i in range(random.randrange(1, 3)):
-        replace_index = random.randrange(len(pword) // 2)
-        pword = pword[0:replace_index] + \
-            str(random.randrange(10)) + pword[replace_index + 1:]
-        return pword
+    def replace_with_number(pword):
+        for i in range(random.randrange(1, 3)):
+            replace_index = random.randrange(len(pword) // 2)
+            pword = pword[0:replace_index] + \
+                str(random.randrange(10)) + pword[replace_index + 1:]
+            return pword
 
 # This function mixes the given password with Uppercase letters.
 
 
-def replace_with_uppercase_letter(pword):
-    for i in range(random.randrange(1, 3)):
-        replace_index = random.randrange(len(pword) // 2, len(pword))
-        pword = pword[0:replace_index] + \
-            pword[replace_index].upper() + pword[replace_index + 1:]
-        return pword
-
-# Main fuction of the generator.
-
-
-def main():
+    def replace_with_uppercase_letter(pword):
+        for i in range(random.randrange(1, 3)):
+            replace_index = random.randrange(len(pword) // 2, len(pword))
+            pword = pword[0:replace_index] + \
+                pword[replace_index].upper() + pword[replace_index + 1:]
+            return pword
     print("How many passwords do you to generate?")
     num_passwords = int(input("Enter a Number: "))
 
