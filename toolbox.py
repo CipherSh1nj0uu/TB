@@ -1,7 +1,8 @@
 from tools import passgener
+from memory_profiler import profile
 from tools import autofilter
 
-
+@profile
 def main():
 
     print("Choose the tool you want to use.\nPassword Generator(1) - AutoFilter(2)")
